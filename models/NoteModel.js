@@ -15,6 +15,9 @@ const NoteModel = sequelize.define('Note',{
     description:{
         type:DataTypes.STRING,
         allowNull:false,
+        validate: {
+            len: [2,255]
+        }
     },
     deleted:{
         type:DataTypes.BOOLEAN,
