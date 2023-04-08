@@ -1,3 +1,5 @@
+import * as dotenv from 'dotenv'
+dotenv.config()
 import express from 'express';
 import sequelize from './db.js';
 import NotesRouter from './routes/notes.routes.js';
@@ -5,8 +7,7 @@ import UserRouter from './routes/user.routes.js';
 import cors from "cors";
 
 const app = express();
-
-const PORT = 3500;
+const PORT = process.env.PORT;
 
 //middlewares
 app.use(cors());
