@@ -19,6 +19,10 @@ const NoteModel = sequelize.define('Note',{
             len: [2,255]
         }
     },
+    bgColor:{
+        type:DataTypes.STRING,
+        allowNull:false,
+    },
     deleted:{
         type:DataTypes.BOOLEAN,
         defaultValue:false,
